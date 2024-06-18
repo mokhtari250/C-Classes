@@ -1,0 +1,28 @@
+#include <string>
+using namespace std;
+
+class Date
+{
+    private:
+        int month;
+        int day;
+        int year;
+
+        static int datecounter;
+
+    public:
+        Date(): Date(1,1,2020) {dateCounter++;}
+
+        Date(int theMonth, int theDay, int theYear): month(theMonth),day(theDay), year(theYear) {}
+        {dateCounter++;}
+
+        int getMonth() const {return month;}
+
+        std::string getShortDate() const;
+
+        string getShortDate() const;
+
+        void setDay(int day) { this->day = day; }
+
+        static int getNumDates() {return dateCounter; }
+};
